@@ -1,10 +1,10 @@
 {
   "name": "vi-builder",
-  "version": "0.0.1",
+  "version": "react-live-demo",
   "authors": [
-    "Frank Weindel <fweindel@onetwosee.com>"
+    "Frank Weindel <frank@weindel.info>"
   ],
-  "license": "Proprietary",
+  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",

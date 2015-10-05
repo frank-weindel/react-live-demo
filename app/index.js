@@ -23,7 +23,7 @@ const localStorage = window.localStorage;
 const TAB_SOURCE = 'SOURCE';
 const TAB_TRANSCODE = 'TRANSCODE';
 
-const BuilderApp = React.createClass({
+const LiveDemoApp = React.createClass({
   getInitialState() {
     return {
       sourceCode: '',
@@ -61,21 +61,21 @@ const BuilderApp = React.createClass({
       indentWithTabs: false
     };
     const srcTabClassName = classNames({
-      'otsBuilderApp-tab': true,
-      'otsBuilderApp-active': showSource
+      'otsLiveDemoApp-tab': true,
+      'otsLiveDemoApp-active': showSource
     });
     const transTabClassName = classNames({
-      'otsBuilderApp-tab': true,
-      'otsBuilderApp-active': !showSource
+      'otsLiveDemoApp-tab': true,
+      'otsLiveDemoApp-active': !showSource
     });
     console.log((transCode || transError));
     return (
-      <div className='otsBuilderApp'>
-        <div className='otsBuilderApp-tabs'>
+      <div className='otsLiveDemoApp'>
+        <div className='otsLiveDemoApp-tabs'>
           <button className={srcTabClassName} onClick={this._onSrcClick}>Source</button>
           <button className={transTabClassName} onClick={this._onTransClick}>Transcode</button>
         </div>
-        <div className='otsBuilderApp-src'>
+        <div className='otsLiveDemoApp-src'>
           <Codemirror
             value={showSource ? sourceCode : (transCode || transError)}
             onChange={this._onChangeEditor}
@@ -203,7 +203,7 @@ const BuilderApp = React.createClass({
         ReactDOM.render(<Component />, document.getElementById('preview'));
       }
       else if (error) {
-        ReactDOM.render(<div className='otsBuilderApp-error'>{error.toString()}</div>, document.getElementById('preview'));
+        ReactDOM.render(<div className='otsLiveDemoApp-error'>{error.toString()}</div>, document.getElementById('preview'));
       }
     }
     catch (e) {
@@ -212,7 +212,7 @@ const BuilderApp = React.createClass({
   }
 });
 
-ReactDOM.render(<BuilderApp />, document.getElementById('editor'));
+ReactDOM.render(<LiveDemoApp />, document.getElementById('editor'));
 
 
 // const newProgram = {
