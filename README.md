@@ -1,5 +1,5 @@
 # react-live-demo
-A tool for doing live demos or just experimenting with React.js.
+A tool for doing live demos or just experimenting with React.js. It includes a syntax highlighted text editor (via Codemirror) and a live preview of your code in action. Supports ES6 and JSX thanks to Babel.
 
 ![Screenshot](/screenshot.png "Screenshot")
 
