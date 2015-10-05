@@ -1,0 +1,15 @@
+{
+  "name": "vi-builder",
+  "version": "0.0.1",
+  "authors": [
+    "Frank Weindel <fweindel@onetwosee.com>"
+  ],
+  "license": "Proprietary",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

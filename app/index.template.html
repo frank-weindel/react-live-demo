@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+    {% for (var css in o.htmlWebpackPlugin.files.css) { %}
+    <link href="{%=o.htmlWebpackPlugin.files.css[css] %}" rel="stylesheet">
+    {% } %}
+    <style>
+      body {
+        white-space: nowrap;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      html {
+        box-sizing: border-box;
+        height: 100%;
+      }
+      *, *:before, *:after {
+        box-sizing: inherit;
+      }
+
+      .otsViBuilder-editor,
+      .otsViBuilder-preview
+      {
+        float: left;
+        width: 50%;
+        height: 100%;
+      }
+
+      .otsViBuilder-tabBar {
+        height: 33px;
+        background-color: #009DE6;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="editor" class="otsViBuilder-editor"></div>
+    <div>
+      <div class="otsViBuilder-tabBar"></div>
+      <div id="preview" class="otsViBuilder-preview"></div>
+    </div>
+    {% for (var chunk in o.htmlWebpackPlugin.files.chunks) { %}
+    <script src="{%=o.htmlWebpackPlugin.files.chunks[chunk].entry %}"></script>
+    {% } %}
+  </body>
+</html>

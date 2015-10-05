@@ -1,0 +1,7 @@
+build/
+node_modules/
+bower_components/
+/*.config.js
+test-results.xml
+deploy-config.js
+app-config.js

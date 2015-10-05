@@ -1,0 +1,36 @@
+{
+  "env": {
+    "browser": true,
+    "amd": true,
+    "es6": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "ecmaFeatures": {
+    "modules": true,
+    "jsx": true
+  },
+  "rules": {
+    // Disabled
+    "no-alert": 0,
+    "no-mixed-spaces-and-tabs": 0,
+    "no-multi-spaces": 0,
+    "space-infix-ops": 0,
+    "quotes": 0,
+    "strict": 0,
+    "no-underscore-dangle": 0,
+    "dot-notation": 0,
+    "new-cap": 0,
+    // Custom
+    "no-unused-vars": [1, {"args": "none"}],
+    // Warnings
+    "no-undef": 1,
+    "no-extra-semi": 1,
+    // Errors
+
+  },
+  "globals": {
+    "module": true
+  }
+}
